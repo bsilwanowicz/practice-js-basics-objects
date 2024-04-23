@@ -9,3 +9,16 @@ const calendarJS = {
     'ES8': '2017-06',
     'ES9': '2018-06',
 }
+
+const iterateEsVersion = getEsVersion(calendarJS)
+
+function getEsVersion(calendarObject) {
+    for (const esVersion in calendarObject){
+        if (calendarObject[esVersion] === null) {
+            console.log(esVersion + ' nie zostało wydane')
+        } else {
+            console.log(esVersion + ' wydano w terminie ' + calendarObject[esVersion])
+        }
+    }
+
+}
